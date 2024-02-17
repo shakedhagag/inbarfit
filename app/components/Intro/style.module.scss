@@ -1,0 +1,41 @@
+.IntroContainer {
+  display: flex;
+  background-color: rgb(244, 169, 181);
+  height: 52vw;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px 100px 10px 100px;
+
+  .ImgContainer {
+    position: relative;
+    width: 40%;
+    height: 80%;
+    overflow: hidden;
+    border-radius: 0px 60px 0px 60px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    margin-left: 7%;
+    .img {
+      object-fit: cover;
+    }
+  }
+
+  .info {
+    width: 50%;
+    height: 80%;
+    padding: 0 2rem;
+    text-wrap: pretty;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    p {
+      margin-left: -15px;
+      font-size: 2.5vw;
+      font-weight: 400;
+      text-align: right;
+      text-orientation: mixed;
+      direction: rtl;
+      white-space: pre-line;
+      letter-spacing: 0.25px;
+    }
+  }
+}

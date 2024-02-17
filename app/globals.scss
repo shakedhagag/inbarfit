@@ -1,0 +1,106 @@
+// Vendors
+@import "node_modules/locomotive-scroll/dist/locomotive-scroll";
+
+body {
+  margin: 0px;
+  overflow: hidden; /* Hide scrollbars */
+  /* cursor: wait; Add after Preloader*/
+  // width: 100vw;
+}
+
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+h1 {
+  font-size: 6rem; // Default size for large screens
+  @media screen and (max-width: 1200px) {
+    // Medium screens
+    font-size: 3rem;
+  }
+  @media screen and (max-width: 768px) {
+    // Small screens / tablets
+    font-size: 2.5rem;
+  }
+  @media screen and (max-width: 480px) {
+    // Extra small screens / phones
+    font-size: 2rem;
+  }
+}
+h2 {
+  font-size: 4rem; // Default size for large screens
+  @media screen and (max-width: 1200px) {
+    // Medium screens
+    font-size: 2.5rem;
+  }
+  @media screen and (max-width: 768px) {
+    // Small screens / tablets
+    font-size: 1.5rem;
+  }
+  @media screen and (max-width: 480px) {
+    // Extra small screens / phones
+    font-size: 1rem;
+  }
+}
+
+p {
+  direction: rtl;
+  font-weight: 400;
+  font-size: 1rem; // Default size for large screens
+  @media screen and (max-width: 1200px) {
+    // Medium screens
+    font-size: 1rem;
+  }
+  @media screen and (max-width: 768px) {
+    // Small screens / tablets
+    font-size: 0.5rem;
+  }
+  @media screen and (max-width: 480px) {
+    // Extra small screens / phones
+    font-size: 0.7rem;
+  }
+}
+
+h3 {
+  font-size: 4rem; // Default size for large screens
+  @media screen and (max-width: 1200px) {
+    // Medium screens
+    font-size: 6vh;
+  }
+  @media screen and (max-width: 768px) {
+    // Small screens / tablets
+    font-size: 4vh;
+  }
+  @media screen and (max-width: 480px) {
+    // Extra small screens / phones
+    font-size: 3vh;
+  }
+}
+
+li {
+  direction: rtl;
+  @media screen and (max-width: 1200px) {
+    // Medium screens
+    font-size: 1rem;
+  }
+  @media screen and (max-width: 768px) {
+    // Small screens / tablets
+    font-size: 1rem;
+  }
+  @media screen and (max-width: 480px) {
+    // Extra small screens / phones
+    font-size: 0.7rem;
+  }
+}

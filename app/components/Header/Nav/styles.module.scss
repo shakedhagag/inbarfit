@@ -1,0 +1,41 @@
+.menu {
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  background-color: #a3d3cb;
+  color: white;
+  direction: rtl;
+
+  .body {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 12;
+
+    .nav {
+      display: flex;
+      flex-direction: column;
+      font-size: 56px;
+      gap: 16px;
+      margin-top: 90px;
+
+      .header {
+        color: white;
+        border-bottom: 1px solid white;
+        font-size: large;
+        margin-bottom: 40px;
+        direction: rtl;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: 300;
+        font-size: xx-large;
+      }
+    }
+  }
+}
