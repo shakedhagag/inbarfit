@@ -1,0 +1,24 @@
+.swiperContainer {
+  background-color: #ef65af0a;
+  display: flex;
+  width: 100%;
+  height: 200px;
+  justify-content: center;
+  height: 30vh;
+
+  .workoutImage {
+    // flex: 4;
+    // position: relative;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    margin-right: 2%;
+    .img {
+      object-fit: cover;
+      object-position: center;
+    }
+    p.positioned {
+      position: relative;
+      z-index: 100;
+      right: 40%;
+    }
+  }
+}

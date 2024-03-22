@@ -8,6 +8,9 @@ import Intro from "./components/Intro";
 import AboutPoints from "./components/AboutPoints";
 import SubHeader from "./components/SubHeader";
 import AboutMe from "./components/AboutMe";
+import WorkoutTypes from "./components/WorkoutTypes";
+import Testimony from "./components/Testimony";
+import Footer from "./components/Footer";
 
 export default function Home() {
   useEffect(() => {
@@ -41,6 +44,11 @@ export default function Home() {
         <AboutPoints />
         <SubHeader title="קצת עליי" />
         <AboutMe />
+        <SubHeader title="סוגי אימונים" />
+        <WorkoutTypes />
+        <SubHeader title="מתאמנות מספרות" />
+        <Testimony />
+        <Footer />
       </main>
     </div>
   );
