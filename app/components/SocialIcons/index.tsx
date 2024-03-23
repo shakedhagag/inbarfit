@@ -22,7 +22,9 @@ export default function SocialIcons() {
         </Link>
       </button>
       <button className={styles.icon}>
-        <LinkedInIcon />
+        <Link href="https://www.linkedin.com/in/inbar-zichlinskey/">
+          <LinkedInIcon />
+        </Link>
       </button>
       <button className={styles.icon}>
         <FacebookIcon />
