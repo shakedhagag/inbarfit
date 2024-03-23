@@ -48,9 +48,9 @@ export default function Home() {
           <SubHeader title="סוגי אימונים" />
           <WorkoutTypes />
           <SubHeader title="מתאמנות מספרות" />
-          <Testimony />
         </div>
       </main>
+      <Testimony />
       <Footer />
     </div>
   );
