@@ -3,7 +3,7 @@
 
 body {
   margin: 0px;
-  overflow: hidden; /* Hide scrollbars */
+  overflow: visible; /* Hide scrollbars */
   /* cursor: wait; Add after Preloader*/
   // width: 100vw;
 }
@@ -18,7 +18,7 @@ html.lenis {
   overscroll-behavior: contain;
 }
 .lenis.lenis-stopped {
-  overflow: hidden;
+  overflow: visible;
 }
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
