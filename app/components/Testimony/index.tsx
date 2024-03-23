@@ -20,39 +20,37 @@ export default function Testimony() {
       >
         <SwiperSlide>
           <iframe
+            className={style.video}
             width="280"
             height="460"
             src="https://youtube.com/embed/DeXTHrPcFyE"
-            frameBorder="0"
-            allowFullScreen
             title="Hen"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           ></iframe>
         </SwiperSlide>
         <SwiperSlide>
           <iframe
+            className={style.video}
             width="280"
             height="460"
             src="https://youtube.com/embed/FTaSDskgXG0?si=QyecptNC7QN2oqU-"
-            frameBorder="0"
-            allowFullScreen
             title="Hen"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           ></iframe>
         </SwiperSlide>
         <SwiperSlide>
           <iframe
+            className={style.video}
             width="560"
             height="315"
             src="https://www.youtube.com/embed/RznNdAJ89N8?si=i1QpXoLQk_vduYaJ"
             title="YouTube video player"
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
           ></iframe>
         </SwiperSlide>
         <SwiperSlide>
           <iframe
+            className={style.video}
             width="560"
             height="315"
             src="https://www.youtube.com/embed/oho4e7LjlYI?si=R2e8WV4_M6BNDV43"
@@ -64,6 +62,7 @@ export default function Testimony() {
         </SwiperSlide>
         <SwiperSlide>
           <iframe
+            className={style.video}
             width="560"
             height="315"
             src="https://www.youtube.com/embed/Yki5GeJR8ic?si=TIs2xSqHjwwjrnPT"

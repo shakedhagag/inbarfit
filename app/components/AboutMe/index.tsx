@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.scss";
 import Image from "next/image";
-import { CurlyBracket } from "@/public/icons";
+// import { CurlyBracket } from "@/public/icons";
 
 export default function AboutMe() {
   return (
@@ -9,9 +9,7 @@ export default function AboutMe() {
       <div className={styles.aboutMeContainer}>
         <div className={styles.aboutMeRight}>
           <div className={styles.curlyP}>
-            <span className={styles.curlys}>
-              <CurlyBracket />
-            </span>
+            <span className={styles.curlys}>{/* <CurlyBracket /> */}</span>
             <p>
               נעים להכיר אני ענבר זיכלינסקי קואצרית לאורח חיים בריא ומאמנת כושר
               מוסמכת לאימונים פונקציונלים וסטודיו, בוגרת קמפוס שיאים (מרכז
@@ -20,9 +18,7 @@ export default function AboutMe() {
             </p>
           </div>
           <div className={styles.curlyP}>
-            <span className={styles.curlys}>
-              <CurlyBracket />
-            </span>
+            <span className={styles.curlys}>{/* <CurlyBracket /> */}</span>
             <p>
               דרך OBIZ והסטודיו אני עוזרת לאנשים, חברות וארגונים להטמיע אורח
               חיים בריא ולשפר את איכות החיים שלהם. אני מבצעת זאת דרך הרצאות,
@@ -32,9 +28,7 @@ export default function AboutMe() {
             </p>
           </div>
           <div className={styles.curlyP}>
-            <span className={styles.curlys}>
-              <CurlyBracket />
-            </span>
+            <span className={styles.curlys}>{/* <CurlyBracket /> */}</span>
             <span>
               <p>
                 אני מאמינה שאימונים זה משהו שהוא must to have ולא nice to have

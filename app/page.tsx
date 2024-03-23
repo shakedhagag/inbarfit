@@ -38,18 +38,20 @@ export default function Home() {
         </div>
       </header>
       <main>
-        <SubHeader title="ברוכה הבאה" />
-        <Intro />
-        <SubHeader title="מידע כללי על הסטודיו" />
-        <AboutPoints />
-        <SubHeader title="קצת עליי" />
-        <AboutMe />
-        <SubHeader title="סוגי אימונים" />
-        <WorkoutTypes />
-        <SubHeader title="מתאמנות מספרות" />
-        <Testimony />
-        <Footer />
+        <div className={styles.mainBody}>
+          <SubHeader title="ברוכה הבאה" />
+          <Intro />
+          <SubHeader title="מידע כללי על הסטודיו" />
+          <AboutPoints />
+          <SubHeader title="קצת עליי" />
+          <AboutMe />
+          <SubHeader title="סוגי אימונים" />
+          <WorkoutTypes />
+          <SubHeader title="מתאמנות מספרות" />
+          <Testimony />
+        </div>
       </main>
+      <Footer />
     </div>
   );
 }

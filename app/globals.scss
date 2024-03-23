@@ -74,18 +74,18 @@ p {
 }
 
 h3 {
-  font-size: 4rem; // Default size for large screens
+  font-size: 3rem; // Default size for large screens
   @media screen and (max-width: 1200px) {
     // Medium screens
-    font-size: 6vh;
+    font-size: 3vh;
   }
   @media screen and (max-width: 768px) {
     // Small screens / tablets
-    font-size: 4vh;
+    font-size: 3vh;
   }
   @media screen and (max-width: 480px) {
     // Extra small screens / phones
-    font-size: 3vh;
+    font-size: 2vh;
   }
 }
 

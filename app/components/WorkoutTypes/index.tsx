@@ -11,7 +11,7 @@ export default function WorkoutTypes() {
   return (
     <div className={styles.swiperContainer}>
       <Swiper
-        slidesPerView={2}
+        slidesPerView={4}
         spaceBetween={10}
         pagination={{
           clickable: true,
