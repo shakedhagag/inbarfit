@@ -51,7 +51,7 @@ export default function AboutMe() {
         </div>
         <div className={styles.aboutMeLeft}>
           <Image
-            src={"/images/me.jpeg"}
+            src={"/images/me.JPEG"}
             alt="me"
             fill={true}
             className={styles.img}

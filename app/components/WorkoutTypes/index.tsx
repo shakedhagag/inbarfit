@@ -22,7 +22,7 @@ export default function WorkoutTypes() {
           <div className={styles.workoutImage}>
             <p className={styles.positioned}>Kickbox</p>
             <Image
-              src={"/images/me.jpeg"}
+              src={"/images/me.JPEG"}
               alt="me"
               fill={true}
               className={styles.img}
@@ -33,7 +33,7 @@ export default function WorkoutTypes() {
           <div className={styles.workoutImage}>
             <p className={styles.positioned}>Kickbox</p>
             <Image
-              src={"/images/me.jpeg"}
+              src={"/images/me.JPEG"}
               alt="me"
               fill={true}
               className={styles.img}
@@ -45,7 +45,7 @@ export default function WorkoutTypes() {
           <div className={styles.workoutImage}>
             <p className={styles.positioned}>Kickbox</p>
             <Image
-              src={"/images/me.jpeg"}
+              src={"/images/me.JPEG"}
               alt="me"
               fill={true}
               className={styles.img}
@@ -56,7 +56,7 @@ export default function WorkoutTypes() {
           <div className={styles.workoutImage}>
             <p className={styles.positioned}>Kickbox</p>
             <Image
-              src={"/images/me.jpeg"}
+              src={"/images/me.JPEG"}
               alt="me"
               fill={true}
               className={styles.img}

@@ -7,7 +7,7 @@ export default function Intro() {
     <div className={styles.IntroContainer}>
       <div className={styles.ImgContainer}>
         <Image
-          src={"/images/dumbell.jpg"}
+          src={"/images/dumbell.JPG"}
           alt="intro image"
           fill={true}
           className={styles.img}
