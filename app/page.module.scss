@@ -1,6 +1,7 @@
 .pageLayout {
   display: flex;
   flex-direction: column;
+  overflow: auto;
   main {
     @media screen and (max-width: 768px) {
       padding-right: 5vw;
