@@ -12,7 +12,7 @@ export default function SocialIcons() {
   return (
     <div className={styles.socialIcons}>
       <button className={styles.icon}>
-        <Link href="https://www.instagram.com/inbarfitstudio/">
+        <Link href="https://www.instagram.com/inbarzichlinskey/">
           <InstagramIcon />
         </Link>
       </button>
