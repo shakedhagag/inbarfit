@@ -51,7 +51,9 @@ export default function Home() {
         </div>
       </main>
       <Testimony />
-      <Footer />
+      <div className={styles.footerCont}>
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -6,12 +6,11 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   /* cursor: wait; Add after Preloader*/
-  // width: 100vw;
+  width: 100vw;
 }
 
 html.lenis {
   height: auto;
-  width: auto;
 }
 .lenis.lenis-smooth {
   scroll-behavior: auto;
