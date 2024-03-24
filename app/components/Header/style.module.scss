@@ -57,6 +57,9 @@
     justify-content: flex-end;
     align-items: flex-start;
     width: 100%;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
     .socialIcons {
       flex-shrink: 1;
       z-index: 1;

@@ -36,7 +36,7 @@ export default function Header() {
       rotate: 360,
     });
   }, []);
-  console.log(burger.current);
+
   return (
     <div className={styles.headerContainer}>
       <div
