@@ -103,7 +103,6 @@
   width: 60vw;
   display: flex;
   flex-direction: column;
-
   .testimony {
     overflow: scroll;
   }
@@ -111,4 +110,5 @@
 
 .footerCont {
   overflow-x: hidden;
+  margin-top: 10%;
 }
