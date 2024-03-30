@@ -39,18 +39,20 @@ export default function Home() {
       </header>
       <main>
         <div className={styles.mainBody}>
-          <SubHeader title="ברוכה הבאה" />
+          <SubHeader title="ברוכה הבאה למקום האימונים שלך" />
           <Intro />
+          <div className={styles.tesitmony}>
+            <SubHeader title="מתאמנות מספרות" />
+            <Testimony />
+          </div>
           <SubHeader title="מידע כללי על הסטודיו" />
           <AboutPoints />
-          <SubHeader title="קצת עליי" />
-          <AboutMe />
           <SubHeader title="סוגי אימונים" />
           <WorkoutTypes />
-          <SubHeader title="מתאמנות מספרות" />
+          <SubHeader title="קצת עליי" />
+          <AboutMe />
         </div>
       </main>
-      <Testimony />
       <div className={styles.footerCont}>
         <Footer />
       </div>

@@ -1,19 +1,20 @@
 .testimonyContainer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin: 20px;
-  border-radius: 10px;
+  justify-content: center;
+  height: min-content;
   background-color: #ef65af0a;
   text-align: center;
-  overflow: hidden;
-  position: relative;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .video {
-  object-fit: cover;
-  object-position: center;
   border: 0;
+}
+
+.swiper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
