@@ -52,21 +52,21 @@ export default function Header() {
           }`}
         ></div>
       </div>
-
-      <div className={styles.socialIcons}>
+      <div className="flex space-x-6 text-white w-full justify-between">
+        <div className="flex justify-around lg:scale-100 md:scale-100 sm:scale-0 ">
+          {[...navItems].reverse().map((data, index) => {
+            return (
+              <div key={index} className="m-2">
+                <a>{data.title} </a>
+                <div className={styles.indicator}></div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <div className="ml-2">
         <SocialIcons />
       </div>
-      <div className={styles.nav}>
-        {[...navItems].reverse().map((data, index) => {
-          return (
-            <div key={index} className={styles.el}>
-              <a>{data.title}</a>
-              <div className={styles.indicator}></div>
-            </div>
-          );
-        })}
-      </div>
-
       <AnimatePresence mode="wait">{isMenuActive && <Nav />}</AnimatePresence>
     </div>
   );

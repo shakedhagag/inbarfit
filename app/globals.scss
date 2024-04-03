@@ -1,4 +1,7 @@
 // Vendors
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import "node_modules/locomotive-scroll/dist/locomotive-scroll";
 
 body {

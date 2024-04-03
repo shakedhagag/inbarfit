@@ -10,25 +10,43 @@ import {
 
 export default function SocialIcons() {
   return (
-    <div className={styles.socialIcons}>
-      <button className={styles.icon}>
-        <Link href="https://www.instagram.com/inbarzichlinskey/">
-          <InstagramIcon />
-        </Link>
-      </button>
-      <button className={styles.icon}>
-        <Link href="https://tinyurl.com/58jubfw8">
-          <WhatsAppIcon />
-        </Link>
-      </button>
-      <button className={styles.icon}>
-        <Link href="https://www.linkedin.com/in/inbar-zichlinskey/">
-          <LinkedInIcon />
-        </Link>
-      </button>
-      <button className={styles.icon}>
-        <FacebookIcon />
-      </button>
+    <div className="pr-2 mt-2 sm:flex sm:items-center sm:justify-between">
+      <ul className="flex justify-center gap-6 sm:justify-end">
+        <li>
+          <button className="text-teal-700 transition hover:text-pink-700/75">
+            <Link href="https://www.facebook.com/inbarzichlinskey">
+              <span className="sr-only">Facebook</span>
+              <FacebookIcon />
+            </Link>
+          </button>
+        </li>
+
+        <li>
+          <button className="text-teal-700 transition hover:text-pink-700/75">
+            <Link href="https://www.instagram.com/inbarzichlinskey/">
+              <span className="sr-only">Instagram</span>
+              <InstagramIcon />
+            </Link>
+          </button>
+        </li>
+
+        <li>
+          <button className="text-teal-700 transition hover:text-pink-700/75">
+            <Link href="https://tinyurl.com/58jubfw8">
+              <span className="sr-only">WhatsApp</span>
+              <WhatsAppIcon />
+            </Link>
+          </button>
+        </li>
+        <li>
+          <button className="text-teal-700 transition hover:text-pink-700/75">
+            <Link href="https://www.linkedin.com/in/inbar-zichlinskey/">
+              <span className="sr-only">LinkedIn</span>
+              <LinkedInIcon />
+            </Link>
+          </button>
+        </li>
+      </ul>
     </div>
   );
 }
