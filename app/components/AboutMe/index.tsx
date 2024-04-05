@@ -1,24 +1,20 @@
 import React from "react";
-import styles from "./styles.module.scss";
-import Image from "next/image";
-// import { CurlyBracket } from "@/public/icons";
+import { Container } from "../ui/Container";
+import Card from "../ui/Card";
 
 export default function AboutMe() {
   return (
-    <div className={styles.cvontainer}>
-      <div className={styles.aboutMeContainer}>
-        <div className={styles.aboutMeRight}>
-          <div className={styles.curlyP}>
-            <span className={styles.curlys}>{/* <CurlyBracket /> */}</span>
+    <div>
+      <div className="grid grid-cols-2">
+        <div className="flex-auto">
+          <Container>
             <p>
               נעים להכיר אני ענבר זיכלינסקי קואצרית לאורח חיים בריא ומאמנת כושר
               מוסמכת לאימונים פונקציונלים וסטודיו, בוגרת קמפוס שיאים (מרכז
               הספורט של אוניברסיטת תל אביב) כיום אני בעלת סטודיו בוטיק בסביון
               המיועד לאימוני כושר פונקציונלים והבעלים של חברת OBIZ.
             </p>
-          </div>
-          <div className={styles.curlyP}>
-            <span className={styles.curlys}>{/* <CurlyBracket /> */}</span>
+            <br />
             <p>
               דרך OBIZ והסטודיו אני עוזרת לאנשים, חברות וארגונים להטמיע אורח
               חיים בריא ולשפר את איכות החיים שלהם. אני מבצעת זאת דרך הרצאות,
@@ -26,34 +22,27 @@ export default function AboutMe() {
               שלא צלחו לרדת במשקל וללמוד איך לשמור על זה אחת ולסגל שגרה של אורח
               חיים בריא.
             </p>
-          </div>
-          <div className={styles.curlyP}>
-            <span className={styles.curlys}>{/* <CurlyBracket /> */}</span>
-            <span>
-              <p>
-                אני מאמינה שאימונים זה משהו שהוא must to have ולא nice to have
-                כלומר כל אחת ואחת מכן צריכה להתאמן, ובשביל להצליח להתמיד
-                באימונים חייב 3 דברים עיקרים:
-              </p>
-              <ol>
-                <li>שזה יהיה קרוב לבית</li>
-                <li>שתרגישי שמתייחסים אליך והאימון מותאם אליך ולמטרות שלך</li>
-                <li>שאת תהני באימון ותיהיה אווירה טובה</li>
-              </ol>
-            </span>
-          </div>
+            <br />
+
+            <p>
+              אני מאמינה שאימונים זה משהו שהוא must to have ולא nice to have
+              כלומר כל אחת ואחת מכן צריכה להתאמן, ובשביל להצליח להתמיד באימונים
+              חייב 3 דברים עיקרים:
+            </p>
+            <ol>
+              <li>שזה יהיה קרוב לבית</li>
+              <li>שתרגישי שמתייחסים אליך והאימון מותאם אליך ולמטרות שלך</li>
+              <li>שאת תהני באימון ותיהיה אווירה טובה</li>
+            </ol>
+          </Container>
         </div>
-        <div className={styles.aboutMeLeft}>
-          <Image
-            src={"/images/aboutMe.jpg"}
-            alt="me"
-            fill={true}
-            className={styles.img}
-          />
-          <p className={styles.waitingForU}>מחכה לכן, ענבר ❤️</p>
+        <Card images={["/images/aboutMe.jpg", "/images/aboutMe2.JPG"]} />
+        <div className="grid grid-cols-subgrid col-span-2">
+          <Container className="relative mt-2 col-start-2">
+            <p>מחכה לכן, ענבר ❤️</p>
+          </Container>
         </div>
       </div>
-      <div></div>
     </div>
   );
 }

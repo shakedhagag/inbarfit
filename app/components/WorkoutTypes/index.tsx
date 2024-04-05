@@ -6,11 +6,44 @@ import Image from "next/image";
 import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
+import Card from "../ui/Card";
 
 export default function WorkoutTypes() {
   return (
     <div className={styles.swiperContainer}>
-      <Swiper
+      <Card
+        images={[
+          "/images/workoutTypes/kickbox1.JPG",
+          "/images/workoutTypes/kickbox2.JPG",
+        ]}
+        header="Kickbox"
+        className="w-full"
+      />
+      <Card
+        images={[
+          "/images/workoutTypes/pilates1.JPG",
+          "/images/workoutTypes/pilates2.JPG",
+        ]}
+        header="Pilates"
+        className="w-full"
+      />
+      <Card
+        images={[
+          "/images/workoutTypes/functional1.JPG",
+          "/images/workoutTypes/functional2.JPG",
+        ]}
+        header="Functional"
+        className="w-full"
+      />
+      <Card
+        images={[
+          "/images/workoutTypes/yoga1.JPG",
+          "/images/workoutTypes/yoga1.JPG",
+        ]}
+        header="Yoga"
+        className="w-full"
+      />
+      {/* <Swiper
         slidesPerView={4}
         spaceBetween={10}
         pagination={{
@@ -63,7 +96,7 @@ export default function WorkoutTypes() {
             />
           </div>
         </SwiperSlide>
-      </Swiper>
+      </Swiper> */}
     </div>
   );
 }
