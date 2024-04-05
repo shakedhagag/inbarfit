@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function GetInTouch() {
@@ -6,9 +7,9 @@ export default function GetInTouch() {
       <strong className="text-xl text-white sm:text-xl rtl">
         בואי לאימון נסיון ופגישת ייעוץ!
       </strong>
-      <a
+      <Link
         className="inline-flex items-center gap-2 rounded-full border border-white bg-white px-8 py-3 text-pink-600 hover:bg-transparent hover:text-white focus:outline-none focus:ring active:bg-white/90"
-        href="#"
+        href="https://tinyurl.com/58jubfw8"
       >
         <span className="text-sm font-medium"> למה את מחכה? </span>
 
@@ -26,7 +27,7 @@ export default function GetInTouch() {
             d="M17 8l4 4m0 0l-4 4m4-4H3"
           />
         </svg>
-      </a>
+      </Link>
     </div>
   );
 }

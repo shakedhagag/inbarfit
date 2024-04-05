@@ -25,7 +25,6 @@ export default function Home() {
       <header>
         <div className={styles.backgroundContainer}>
           <div className={styles.titleWrapper}>
-            {/* <DumbellIcon className={styles.icon} /> */}
             <h1 className={styles.fancy}>INBAR FIT</h1>
             <h2>STUDIO</h2>
             <div className={styles.subTitle}>
@@ -41,16 +40,20 @@ export default function Home() {
         <div className={styles.mainBody}>
           <SubHeader title="ברוכה הבאה למקום האימונים שלך" />
           <Intro />
-          <div className={styles.tesitmony}>
+          <div className={styles.tesitmony} id="testimony">
             <SubHeader title="מתאמנות מספרות" />
             <Testimony />
           </div>
           <SubHeader title="מידע כללי על הסטודיו" />
           <AboutPoints />
-          <SubHeader title="סוגי אימונים" />
-          <WorkoutTypes />
-          <SubHeader title="קצת עליי" />
-          <AboutMe />
+          <div id="workoutTypes">
+            <SubHeader title="סוגי אימונים" />
+            <WorkoutTypes />
+          </div>
+          <div id="aboutMe">
+            <SubHeader title="קצת עליי" />
+            <AboutMe />
+          </div>
         </div>
       </main>
       <div className={styles.footerCont}>

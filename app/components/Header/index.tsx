@@ -6,6 +6,8 @@ import { AnimatePresence } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SocialIcons from "../SocialIcons";
+import Link from "next/link";
+import { scrollToElement } from "@/utils/scrollToElement";
 
 export default function Header() {
   const [isMenuActive, setIsMenuActive] = useState(false);
@@ -53,12 +55,15 @@ export default function Header() {
         ></div>
       </div>
       <div className="flex space-x-6 text-white w-full justify-between">
-        <div className="flex justify-around lg:scale-100 md:scale-100 sm:scale-0 ">
-          {[...navItems].reverse().map((data, index) => {
+        <div className="flex justify-around lg:scale-100 md:scale-100 sm:scale-0 z-10 ">
+          {[...navItems].map((data, index) => {
             return (
-              <div key={index} className="m-2">
-                <a>{data.title} </a>
-                <div className={styles.indicator}></div>
+              <div className="relative group" key={index}>
+                <div className="hover-target p-4 hover:cursor-pointer hover:text-[#ff7999]">
+                  <Link href={data.href} className="hover:text-[#ff7999]">
+                    {data.title}
+                  </Link>
+                </div>
               </div>
             );
           })}

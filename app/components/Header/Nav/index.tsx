@@ -9,7 +9,9 @@ import Footer from "./Footer";
 
 export const navItems = [
   { title: "דף הבית", href: "/" },
-  { title: "קצת עליי", href: "/about" },
+  { title: "קצת עליי", href: "#aboutMe" },
+  { title: "מתאמנות מספרות", href: "#testimony" },
+  { title: "סוגי אימונים", href: "#workoutTypes" },
   { title: "גלריה", href: "/gallery" },
   { title: "צור קשר", href: "https://tinyurl.com/58jubfw8" },
 ];
