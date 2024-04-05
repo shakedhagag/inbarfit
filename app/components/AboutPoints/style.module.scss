@@ -1,7 +1,7 @@
 .IntroContainer {
   display: flex;
   background-color: pink;
-  height: 30vw;
+  height: 50vw;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -21,8 +21,6 @@
   }
 
   .info {
-    width: 50%;
-    height: 80%;
     padding: 2rem;
     text-wrap: pretty;
     display: flex;

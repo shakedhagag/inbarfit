@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.scss";
 import SocialIcons from "../SocialIcons";
-import SocialRow from "./socialRow";
+import SocialRow from "./SocialRow";
 import GetInTouch from "./GetInTouch";
 
 export default function Footer() {
