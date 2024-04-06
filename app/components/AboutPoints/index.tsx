@@ -5,10 +5,17 @@ import { Container } from "../ui/Container";
 
 export default function AboutPoints() {
   return (
-    <Container className="flex items-center bg-[rgb(244,169,181)] w-full h-full justify-center rounded-[100px_15px_100px_10px]">
-      <div className="flex flex-col justify-center p-2">
-        <h6>מזמינה אותך להצטרף אליי לסטודיו בוטיק בסביון 🌸</h6>
-        <ul>
+    <Container
+      className="flex items-center justify-center
+     bg-[rgb(244,169,181)] w-full h-full rounded-[15px_60px_10px_60px] "
+    >
+      <div className="flex flex-col justify-center p-2 text-l mr-2">
+        <h6 className="text-xl">
+          אימוני כושר אישיים בקבוצות קטנות
+          <br />
+          <p>(3-4 מתאמנות בקבוצה)</p>
+        </h6>
+        <ul className="list-disc mr-6">
           <li>אימונים פונקציונליים שעוזרים בחיזוק/חיטוב</li>
           <li>גמישות בשעות האימונים</li>
           <li>יחס אישי ומקצועי</li>
@@ -16,14 +23,14 @@ export default function AboutPoints() {
           <li>נוף לבריכה</li>
         </ul>
       </div>
-      <div className="relative overflow-hidden rounded-[0_40px_0_40px] m-[2%] md:w-[80%] md:h-[50vh]">
+      <div className=" w-full h-full p-2 overflow-hidden">
         <Image
           src={"/images/InbarSquat.jpg"}
           alt="intro image"
           width={0}
           height={0}
-          style={{ height: "90%", width: "90%" }}
-          className="object-cover object-center rounded-[0_40px_0_40px] shadow-[0_0_10px_rgba(0,0,0,0.1)] m-[2%] md:w-[80%] md:h-[50vh]"
+          style={{ height: "100%", width: "100%" }}
+          className="object-cover shadow-[0_0_10px_rgba(0,0,0,0.1)] rounded-[10px_40px_10px_40px]"
           unoptimized
         />
       </div>

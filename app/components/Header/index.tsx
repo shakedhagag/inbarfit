@@ -8,8 +8,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SocialIcons from "../SocialIcons";
 import Link from "next/link";
 import { scrollToElement } from "@/utils/scrollToElement";
+import { useIsMobile } from "@/utils/useIsMobile";
 
 export default function Header() {
+  const isMobile = useIsMobile();
   const [isMenuActive, setIsMenuActive] = useState(false);
   const burger = useRef(null);
   useLayoutEffect(() => {
@@ -54,22 +56,24 @@ export default function Header() {
           }`}
         ></div>
       </div>
-      <div className="flex space-x-6 text-white w-full justify-between">
-        <div className="flex justify-around lg:scale-100 md:scale-100 sm:scale-0 z-10 ">
-          {[...navItems].map((data, index) => {
-            return (
-              <div className="relative group" key={index}>
-                <div className="hover-target p-4 hover:cursor-pointer hover:text-[#ff7999]">
-                  <Link href={data.href} className="hover:text-[#ff7999]">
-                    {data.title}
-                  </Link>
+      {!isMobile && (
+        <div className="flex space-x-6 text-white w-full justify-between drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+          <div className="flex justify-around sm:scale-0 lg:scale-100 md:scale-100  z-10 ">
+            {[...navItems].map((data, index) => {
+              return (
+                <div className="relative group" key={index}>
+                  <div className="hover-target p-4 hover:cursor-pointer hover:text-[#ff7999]">
+                    <Link href={data.href} className="hover:text-[#ff7999]">
+                      {data.title}
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
-      </div>
-      <div className="ml-2">
+      )}
+      <div className="absolute left-0 ml-2 mt-2">
         <SocialIcons />
       </div>
       <AnimatePresence mode="wait">{isMenuActive && <Nav />}</AnimatePresence>

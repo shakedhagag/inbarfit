@@ -11,6 +11,7 @@ import AboutMe from "./components/AboutMe";
 import WorkoutTypes from "./components/WorkoutTypes";
 import Testimony from "./components/Testimony";
 import Footer from "./components/Footer";
+import Link from "next/link";
 
 export default function Home() {
   useEffect(() => {
@@ -26,12 +27,16 @@ export default function Home() {
         <div className={styles.backgroundContainer}>
           <div className={styles.titleWrapper}>
             <h1 className={styles.fancy}>INBAR FIT</h1>
-            <h2>STUDIO</h2>
-            <div className={styles.subTitle}>
-              <p>סטודיו בוטיק לאימוני נשים בסביון</p>
+            <div className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+              <h2>STUDIO</h2>
+              <div className={styles.subTitle}>
+                <p>סטודיו בוטיק לאימוני נשים בסביון</p>
+              </div>
             </div>
             <div className={styles.contactButton}>
-              <button>לפרטים נוספים</button>
+              <Link href="https://tinyurl.com/58jubfw8">
+                <button>לתיאום אימון היכרות</button>
+              </Link>
             </div>
           </div>
         </div>

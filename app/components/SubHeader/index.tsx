@@ -9,7 +9,7 @@ type SubHeaderProps = {
 export default function SubHeader({ title, id }: SubHeaderProps) {
   return (
     <div className={styles.subHeaderStyle} id={id ? id : ""}>
-      <h3>{title}</h3>
+      <h3 className="text-2xl md:text-xl p-2">{title}</h3>
     </div>
   );
 }
