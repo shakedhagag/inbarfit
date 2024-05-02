@@ -8,8 +8,10 @@ type SubHeaderProps = {
 
 export default function SubHeader({ title, id }: SubHeaderProps) {
   return (
-    <div className="flex justify-center text-pink-800" id={id ? id : ""}>
-      <h3 className="text-xl md:text-3xl  p-2">{title}</h3>
+    <div className="flex justify-center mt-2 " id={id ? id : ""}>
+      <h1 className="text-pink-gradient text-center mb-4 text-4xl font-extrabold leading-none tracking-tight  md:text-5xl lg:text-6xl ">
+        {title}
+      </h1>
     </div>
   );
 }

@@ -13,7 +13,7 @@ export default function WorkoutTypes() {
   const isMobile = useIsMobile();
   useEffect(() => {}, [isMobile]);
   return (
-    <div className={styles.swiperContainer}>
+    <div className="flex w-100  justify-center p-2 min-h-[40vh]">
       <Card
         images={[
           "/images/workoutTypes/kickbox1.JPG",

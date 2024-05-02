@@ -10,7 +10,7 @@ interface CardProps {
 
 export default function Card({ images, header, className, text }: CardProps) {
   return (
-    <div className="group relative block bg-black w-auto">
+    <div className={`group relative block bg-black w-full ${className}`}>
       {images && (
         <>
           <Image

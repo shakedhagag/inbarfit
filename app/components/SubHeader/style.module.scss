@@ -1,11 +1,12 @@
 .subHeaderStyle {
   display: flex;
   justify-content: center;
-  h3 {
-    font-weight: 500;
-    background-image: linear-gradient(to left, #afa7c5, #ff70d9);
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-  }
+}
+
+h1 {
+  font-weight: 500;
+  background-image: linear-gradient(to left, #afa7c5, #ff70d9);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
