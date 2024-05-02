@@ -29,7 +29,7 @@ export function Nav() {
       className={styles.menu}
     >
       <div className={styles.body}>
-        <div className={styles.nav}>
+        <div className="hidden md:block">
           <div className={styles.header}>
             <p>ניווט</p>
           </div>

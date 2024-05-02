@@ -58,7 +58,7 @@ export default function Header() {
       </div>
       {!isMobile && (
         <div className="flex space-x-6 text-white w-full justify-between drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-          <div className="flex justify-around sm:scale-0 lg:scale-100 md:scale-100  z-10 ">
+          <div className="flex justify-around scale-0  md:scale-100  z-10 ">
             {[...navItems].map((data, index) => {
               return (
                 <div className="relative group" key={index}>

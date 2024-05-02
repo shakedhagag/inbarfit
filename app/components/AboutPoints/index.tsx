@@ -1,39 +1,39 @@
 import React from "react";
-import styles from "./style.module.scss";
-import Image from "next/image";
-import { Container } from "../ui/Container";
-
+import aboutPhoto from "@/public/images/InbarSquat.jpg";
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Image,
+  Button,
+} from "@nextui-org/react";
 export default function AboutPoints() {
   return (
-    <Container
-      className="flex items-center justify-center
-     bg-[rgb(244,169,181)] w-full h-full rounded-[15px_60px_10px_60px] "
-    >
-      <div className="flex flex-col justify-center p-2 text-l mr-2">
-        <h6 className="text-xl">
+    <Card className="col-span-12 sm:col-span-4 h-[300px]">
+      <CardHeader className="absolute  z-10 top-1 flex-col !items-start">
+        <h4 className="text-white font-medium text-large">
           אימוני כושר אישיים בקבוצות קטנות
-          <br />
-          <p>(3-4 מתאמנות בקבוצה)</p>
-        </h6>
-        <ul className="list-disc mr-6">
-          <li>אימונים פונקציונליים שעוזרים בחיזוק/חיטוב</li>
-          <li>גמישות בשעות האימונים</li>
-          <li>יחס אישי ומקצועי</li>
-          <li>אווירה תומכת</li>
-          <li>נוף לבריכה</li>
+        </h4>
+        <p className="text-tiny text-white/60 uppercase font-bold">
+          (3-4 מתאמנות בקבוצה)
+        </p>
+        <ul className=" top-4 left-4 p-4 text-white list-disc space-y-2 ">
+          <li className="text-shadow">
+            אימונים פונקציונליים שעוזרים בחיזוק/חיטוב
+          </li>
+          <li className="text-shadow">גמישות בשעות האימונים</li>
+          <li className="text-shadow">יחס אישי ומקצועי</li>
+          <li className="text-shadow">אווירה תומכת</li>
+          <li className="text-shadow">נוף לבריכה</li>
         </ul>
-      </div>
-      <div className=" w-full h-full p-2 overflow-hidden">
-        <Image
-          src={"/images/InbarSquat.jpg"}
-          alt="intro image"
-          width={0}
-          height={0}
-          style={{ height: "100%", width: "100%" }}
-          className="object-cover shadow-[0_0_10px_rgba(0,0,0,0.1)] rounded-[10px_40px_10px_40px]"
-          unoptimized
-        />
-      </div>
-    </Container>
+      </CardHeader>
+      <Image
+        removeWrapper
+        alt="Card background"
+        className="z-0 w-full h-full object-cover"
+        src={aboutPhoto.src}
+      />
+    </Card>
   );
 }

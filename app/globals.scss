@@ -93,18 +93,6 @@ h3 {
   }
 }
 
-li {
-  direction: rtl;
-  @media screen and (max-width: 1200px) {
-    // Medium screens
-    font-size: 1rem;
-  }
-  @media screen and (max-width: 768px) {
-    // Small screens / tablets
-    font-size: 1rem;
-  }
-  @media screen and (max-width: 480px) {
-    // Extra small screens / phones
-    font-size: 0.7rem;
-  }
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }

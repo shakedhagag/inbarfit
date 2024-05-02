@@ -42,7 +42,7 @@ export default function Home() {
         </div>
       </header>
       <main>
-        <div className={styles.mainBody}>
+        <div>
           <SubHeader title="ברוכה הבאה למקום האימונים שלך" />
           <Intro />
           <div className={styles.tesitmony} id="testimony">
