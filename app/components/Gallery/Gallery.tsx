@@ -32,7 +32,7 @@ export default function Gallery({ isOpen, onClose }: GalleryProps) {
     fetchImgs();
   }, []);
 
-  if (!images.length) return null;
+  if (!images?.length) return null;
   return (
     <Modal
       size="5xl"

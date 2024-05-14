@@ -6,12 +6,15 @@ import {
   CardBody,
   CardFooter,
   Image,
-  Button,
 } from "@nextui-org/react";
 export default function AboutPoints() {
   return (
-    <Card className="col-span-12 sm:col-span-4 h-[300px]">
-      <CardHeader className="absolute  z-10 top-1 flex-col !items-start">
+    <Card
+      isFooterBlurred
+      radius="lg"
+      className=" border-none h-[300px] lg:h-[500px]"
+    >
+      <CardFooter className="justify-between flex-col before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
         <h4 className="text-white font-medium text-large">
           אימוני כושר אישיים בקבוצות קטנות
         </h4>
@@ -27,7 +30,7 @@ export default function AboutPoints() {
           <li className="text-shadow">אווירה תומכת</li>
           <li className="text-shadow">נוף לבריכה</li>
         </ul>
-      </CardHeader>
+      </CardFooter>
       <Image
         removeWrapper
         alt="Card background"

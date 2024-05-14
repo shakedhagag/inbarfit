@@ -29,14 +29,14 @@ export function Nav() {
       className={styles.menu}
     >
       <div className={styles.body}>
-        <div className="hidden md:block">
+        <div className={styles.nav}>
           <div className={styles.header}>
             <p>ניווט</p>
           </div>
 
           {navItems.map((data, index) => {
             return (
-              <div key={index}>
+              <div key={index} className="hidden md:block z-100 relative">
                 <Link
                   key={index}
                   data={{ ...data, index }}
