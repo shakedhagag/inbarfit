@@ -7,13 +7,15 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SocialIcons from "../SocialIcons";
 import Link from "next/link";
-import { scrollToElement } from "@/utils/scrollToElement";
 import { useIsMobile } from "@/utils/useIsMobile";
+import Gallery from "../Gallery/Gallery";
 
 export default function Header() {
   const isMobile = useIsMobile();
   const [isMenuActive, setIsMenuActive] = useState(false);
   const burger = useRef(null);
+  const [isOpenGallery, setIsOpenGallery] = useState(false);
+
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(burger.current, {
@@ -63,9 +65,15 @@ export default function Header() {
               return (
                 <div className="relative group" key={index}>
                   <div className="hover-target p-4 hover:cursor-pointer hover:text-[#ff7999]">
-                    <Link href={data.href} className="hover:text-[#ff7999]">
-                      {data.title}
-                    </Link>
+                    {data.href === "/gallery" ? (
+                      <button onClick={() => setIsOpenGallery(true)}>
+                        גלריה
+                      </button>
+                    ) : (
+                      <Link href={data.href} className="hover:text-[#ff7999]">
+                        {data.title}
+                      </Link>
+                    )}
                   </div>
                 </div>
               );
@@ -77,6 +85,7 @@ export default function Header() {
         <SocialIcons />
       </div>
       <AnimatePresence mode="wait">{isMenuActive && <Nav />}</AnimatePresence>
+      <Gallery isOpen={isOpenGallery} onClose={() => setIsOpenGallery(false)} />
     </div>
   );
 }

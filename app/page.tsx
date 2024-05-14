@@ -1,26 +1,21 @@
 "use client";
 import styles from "./page.module.scss";
-import Image from "next/image";
 import { useEffect } from "react";
-import { DumbellIcon } from "@/public/icons";
-import SocialIcons from "@/app/components/SocialIcons";
 import Intro from "./components/Intro";
 import AboutPoints from "./components/AboutPoints";
 import SubHeader from "./components/SubHeader";
 import AboutMe from "./components/AboutMe";
 import WorkoutTypes from "./components/WorkoutTypes";
-import Testimony from "./components/Testimony";
 import Footer from "./components/Footer";
 import Link from "next/link";
-
+import { Offers } from "./components/Offers/Offers";
 export default function Home() {
-  useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
-    })();
-  }, []);
-
+  // useEffect(() => {
+  //   (async () => {
+  //     const LocomotiveScroll = (await import("locomotive-scroll")).default;
+  //     const locomotiveScroll = new LocomotiveScroll();
+  //   })();
+  // }, []);
   return (
     <div className={styles.pageLayout}>
       <header>
@@ -45,10 +40,10 @@ export default function Home() {
         <div>
           <SubHeader title="ברוכה הבאה למקום האימונים שלך" />
           <Intro />
-          <div className={styles.tesitmony} id="testimony">
-            <SubHeader title="מתאמנות מספרות" />
-            <Testimony />
-          </div>
+          {/* <div className={styles.tesitmony} id="testimony"> */}
+          {/*   <SubHeader title="מתאמנות מספרות" /> */}
+          {/*   <Testimony /> */}
+          {/* </div> */}
           <SubHeader title="מידע כללי על הסטודיו" />
           <AboutPoints />
           <div id="workoutTypes">
@@ -59,6 +54,7 @@ export default function Home() {
             <SubHeader title="קצת עליי" />
             <AboutMe />
           </div>
+          <Offers />
         </div>
       </main>
       <div className={styles.footerCont}>
