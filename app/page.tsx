@@ -37,25 +37,23 @@ export default function Home() {
         </div>
       </header>
       <main>
-        <div className="gap-2">
-          <SubHeader title="ברוכה הבאה למקום האימונים שלך" />
-          <Intro />
-          {/* <div className={styles.tesitmony} id="testimony"> */}
-          {/*   <SubHeader title="מתאמנות מספרות" /> */}
-          {/*   <Testimony /> */}
-          {/* </div> */}
-          <SubHeader title="מידע כללי על הסטודיו" />
-          <AboutPoints />
-          <div id="workoutTypes">
-            <SubHeader title="סוגי אימונים" />
-            <WorkoutTypes />
-          </div>
-          <div id="aboutMe">
-            <SubHeader title="קצת עליי" />
-            <AboutMe />
-          </div>
-          <Offers />
+        <SubHeader title="ברוכה הבאה למקום האימונים שלך" />
+        <Intro />
+        {/* <div className={styles.tesitmony} id="testimony"> */}
+        {/*   <SubHeader title="מתאמנות מספרות" /> */}
+        {/*   <Testimony /> */}
+        {/* </div> */}
+        <SubHeader title="מידע כללי על הסטודיו" />
+        <AboutPoints />
+        <div id="workoutTypes">
+          <SubHeader title="סוגי אימונים" />
+          <WorkoutTypes />
         </div>
+        <div id="aboutMe">
+          <SubHeader title="קצת עליי" />
+          <AboutMe />
+        </div>
+        <Offers />
       </main>
       <div className={styles.footerCont}>
         <Footer />

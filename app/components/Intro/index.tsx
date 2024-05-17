@@ -1,50 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./style.module.scss";
 import Image from "next/image";
 import { Container } from "../ui/Container";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
+import YouTube, { YouTubeProps } from "react-youtube";
+import { useIsMobile } from "@/utils/useIsMobile";
 
 export default function Intro() {
+  const isMobile = useIsMobile();
+
+  const opts: YouTubeProps["opts"] = {
+    playerVars: {
+      autoplay: 1,
+    },
+  };
+
   return (
-    <div className="">
-      <Card dir="rtl" className="bg-pink-600/25 ">
-        <div className="flex flex-col md:flex-row">
-          <Card className="lg:min-h-80">
-            <iframe
-              className="object-cover"
-              style={{ width: "100%", height: "100%" }}
-              src="https://youtube.com/embed/zapogwvOVhI?si=o79mt0Jp9I8Nflih"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; encrypted-media;  picture-in-picture"
-            ></iframe>
-          </Card>
-          {/* <p>
-          סטודיו בוטיק המותאם במיוחד לנשים, פה תפגשי באימוני כושר אישיים מותאמים
-          אישית ובקבוצות קטנות.
-        </p>
-        <p>אצלי תרגישי שמתייחסים אליך באופן אישי ומקדמים את המטרות שלך.</p> */}
-          {/* <p>
-          אנחנו נדאג שכל אימון יהיה מאתגר עבורך, מגוון ומותאם! אנחנו כאן כדי
-          לקדם את הגרסה הטובה ביותר שלך!
-        </p> */}
-          <div>
-            <CardHeader className="py-4 ">
-              <h3 className="text-2xl">
-                מזמינה אותך להצטרף אליי לסטודיו בוטיק בסביון 🌸
-              </h3>
-            </CardHeader>
-            <CardBody dir="rtl" className=" px-8 text-l text-right">
-              <div>
-                <ul className="list-disc">
-                  <li>כאן נתייחס אליך באופן אישי ונקדם את המטרות שלך</li>
-                  <li>כאן תוכלי לגלות את ההנאה האמיתית באימונים</li>
-                  <li>כאן תצאי חטובה וחזקה יותר</li>
-                </ul>
-              </div>
-            </CardBody>
-          </div>
-        </div>
+    <Card
+      dir="rtl"
+      className="bg-pink-600/25 flex flex-col md:flex-row justify-center"
+    >
+      <Card className="min-w-80 h-[26rem] md:h-auto md:min-h-96">
+        <YouTube
+          videoId="zapogwvOVhI"
+          opts={opts}
+          className="w-full h-full"
+          iframeClassName="w-full h-full"
+        />
       </Card>
-    </div>
+      <Container className="flex flex-col">
+        <CardHeader className="">
+          <h3 className="text-3xl">
+            מזמינה אותך להצטרף אליי לסטודיו בוטיק בסביון 🌸
+          </h3>
+        </CardHeader>
+        <CardBody
+          dir="rtl"
+          className="min-h-64 items-center justify-center break-normal lg:min-h-96 text-right"
+        >
+          <p className="text-xl md:text-2xl tracking-wide leading-8 text-balance">
+            נעים להכיר אני ענבר זיכלינסקי קואצ'רית לאורח חיים בריא ומאמנת כושר
+            מוסמכת, והבעלים של חברת OBIZ. הקמתי את הסטודיו כדי לתת לכל אחת מכן
+            בית לאימונים, מקום בו תרגישו בנוח להתאמן ותהנו להגיע לכל אימון.
+          </p>
+        </CardBody>
+      </Container>
+    </Card>
   );
 }
