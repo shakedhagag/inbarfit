@@ -39,9 +39,9 @@ export default function Intro() {
           className="min-h-64 items-center justify-center break-normal lg:min-h-96 text-right"
         >
           <p className="text-xl md:text-2xl tracking-wide leading-8 text-balance">
-            נעים להכיר אני ענבר זיכלינסקי קואצ'רית לאורח חיים בריא ומאמנת כושר
-            מוסמכת, והבעלים של חברת OBIZ. הקמתי את הסטודיו כדי לתת לכל אחת מכן
-            בית לאימונים, מקום בו תרגישו בנוח להתאמן ותהנו להגיע לכל אימון.
+            נעים להכיר אני ענבר זיכלינסקי קואצ&apos;רית לאורח חיים בריא ומאמנת
+            כושר מוסמכת, והבעלים של חברת OBIZ. הקמתי את הסטודיו כדי לתת לכל אחת
+            מכן בית לאימונים, מקום בו תרגישו בנוח להתאמן ותהנו להגיע לכל אימון.
           </p>
         </CardBody>
       </Container>

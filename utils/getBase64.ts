@@ -34,13 +34,11 @@ export interface CldImg {
 export default async function addBlurredDataUrls(): Promise<[]> {
   const images = await getCloudinaryResources();
   const base64Promises = images.map((photo: CldImg) => getBase64(photo.url));
-  console.log(images);
   const base64Results = await Promise.all(base64Promises);
   const photosWithBlur = images.map((photo: CldImg, i: number) => {
     photo.blurredDataUrl = base64Results[i];
     return photo;
   });
-  console.log(photosWithBlur);
   return photosWithBlur;
 }
 
@@ -53,6 +51,5 @@ export async function getCloudinaryResources() {
       },
     },
   ).then((r) => r.json());
-  console.log(results.resources);
   return results.resources;
 }
