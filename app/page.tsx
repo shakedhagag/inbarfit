@@ -37,7 +37,7 @@ export default function Home() {
         </div>
       </header>
       <main>
-        <div>
+        <div className="gap-2">
           <SubHeader title="ברוכה הבאה למקום האימונים שלך" />
           <Intro />
           {/* <div className={styles.tesitmony} id="testimony"> */}
