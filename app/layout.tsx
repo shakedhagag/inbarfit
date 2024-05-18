@@ -5,7 +5,6 @@ import "./globals.scss";
 import { NextUIProvider } from "@nextui-org/react";
 
 const inter = Inter({ subsets: ["latin"] });
-const heebo = Heebo({ subsets: ["hebrew"], weight: "500" });
 const noto = Noto_Sans_Hebrew({ subsets: ["hebrew"] });
 
 export const metadata: Metadata = {

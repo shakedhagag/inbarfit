@@ -9,6 +9,7 @@ import WorkoutTypes from "./components/WorkoutTypes";
 import Footer from "./components/Footer";
 import Link from "next/link";
 import { Offers } from "./components/Offers/Offers";
+import Screenshots from "./components/Screenshots/Screenshots";
 export default function Home() {
   // useEffect(() => {
   //   (async () => {
@@ -53,7 +54,16 @@ export default function Home() {
           <SubHeader title="קצת עליי" />
           <AboutMe />
         </div>
-        <Offers />
+        <div className="flex flex-col justify-between gap-y-52">
+          <div className=" py-8">
+            <SubHeader title="תוצאות" />
+            <Screenshots />
+          </div>
+          <div className="mt-14">
+            <SubHeader title="אז מה אני מציעה?" />
+            <Offers />
+          </div>
+        </div>
       </main>
       <div className={styles.footerCont}>
         <Footer />

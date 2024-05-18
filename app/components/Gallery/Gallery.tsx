@@ -22,7 +22,7 @@ export default function Gallery({ isOpen, onClose }: GalleryProps) {
   useEffect(() => {
     const fetchImgs = async () => {
       try {
-        const res = await addBlurredDataUrls();
+        const res = await addBlurredDataUrls("gallery");
         setImages(res);
       } catch (error) {
         console.error("Failed to fetch images:", error);

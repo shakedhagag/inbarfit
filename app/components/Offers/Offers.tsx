@@ -12,8 +12,8 @@ import { CheckIcon } from "./CheckIcon";
 
 export const Offers = () => {
   return (
-    <Container className="flex flex-col gap-4 items-center mt-16">
-      <p className="text-5xl mb-4">אז מה אני מציעה?</p>
+    <Container className="flex flex-col gap-4 items-center mt-8 ">
+      {/* <p className="text-5xl mb-4">אז מה אני מציעה?</p> */}
       <Card className="flex w-full items-center p-4">
         <CardBody className="flex-col md:flex-row justify-evenly gap-4">
           <div className="flex flex-col justify-between items-center gap-8 ">
