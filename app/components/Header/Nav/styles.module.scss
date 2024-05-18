@@ -5,6 +5,7 @@
   background-color: #a3d3cb;
   color: white;
   direction: rtl;
+  z-index: 100;
 
   .body {
     box-sizing: border-box;
@@ -13,7 +14,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    z-index: 100;
+    z-index: 110;
     position: relative;
 
     .nav {

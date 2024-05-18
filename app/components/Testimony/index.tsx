@@ -10,7 +10,7 @@ import YouTube, { YouTubeProps } from "react-youtube";
 export default function Testimony() {
   const opts: YouTubeProps["opts"] = {
     playerVars: {
-      autoplay: 1,
+      autoplay: 0,
     },
   };
   return (

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef, useLayoutEffect } from "react";
+import React, { useState, useRef, useLayoutEffect, useEffect } from "react";
 import styles from "./style.module.scss";
 import { Nav, navItems } from "./Nav";
 import { AnimatePresence } from "framer-motion";
@@ -43,6 +43,14 @@ export default function Header() {
     });
   }, []);
 
+  useEffect(() => {
+    if (isMenuActive) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+    }
+  }, [isMenuActive]);
+
   return (
     <div className={styles.headerContainer}>
       <div
@@ -60,7 +68,7 @@ export default function Header() {
       </div>
       {!isMobile && (
         <div className="flex space-x-6 text-white w-full justify-between drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-          <div className="flex justify-around scale-0  md:scale-100  z-10 ">
+          <div className="flex justify-around scale-0  md:scale-100  z-100 ">
             {[...navItems].map((data, index) => {
               return (
                 <div className="relative group" key={index}>
@@ -81,7 +89,7 @@ export default function Header() {
           </div>
         </div>
       )}
-      <div className="absolute left-0 ml-2 mt-2">
+      <div className="absolute left-0 ml-2 md:mt-2">
         <SocialIcons />
       </div>
       <AnimatePresence mode="wait">{isMenuActive && <Nav />}</AnimatePresence>

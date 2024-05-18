@@ -36,7 +36,7 @@ export function Nav() {
 
           {navItems.map((data, index) => {
             return (
-              <div key={index} className="hidden md:block z-100 relative">
+              <div key={index}>
                 <Link
                   key={index}
                   data={{ ...data, index }}
