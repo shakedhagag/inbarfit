@@ -5,7 +5,7 @@ import { Pagination, Navigation } from "swiper/modules";
 import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
-import YouTube from "react-youtube";
+import YouTube, { YouTubeProps } from "react-youtube";
 
 export default function Testimony() {
   const opts: YouTubeProps["opts"] = {
