@@ -47,10 +47,10 @@ export default function Home() {
         </div>
         <SubHeader title="מידע כללי על הסטודיו" />
         <AboutPoints />
-        <div id="workoutTypes">
-          <SubHeader title="סוגי אימונים" />
-          <WorkoutTypes />
-        </div>
+        {/* <div id="workoutTypes"> */}
+        {/*   <SubHeader title="סוגי אימונים" /> */}
+        {/*   <WorkoutTypes /> */}
+        {/* </div> */}
         <div id="aboutMe">
           <SubHeader title="קצת עליי" />
           <AboutMe />
