@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Link from "next/link";
 import { Offers } from "./components/Offers/Offers";
 import Screenshots from "./components/Screenshots/Screenshots";
+import Testimony from "./components/Testimony";
 export default function Home() {
   // useEffect(() => {
   //   (async () => {
@@ -37,13 +38,13 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <main>
+      <main className="max-w-[100vw] ">
         <SubHeader title="ברוכה הבאה למקום האימונים שלך" />
         <Intro />
-        {/* <div className={styles.tesitmony} id="testimony"> */}
-        {/*   <SubHeader title="מתאמנות מספרות" /> */}
-        {/*   <Testimony /> */}
-        {/* </div> */}
+        <div className={styles.tesitmony} id="testimony">
+          <SubHeader title="מתאמנות מספרות" />
+          <Testimony />
+        </div>
         <SubHeader title="מידע כללי על הסטודיו" />
         <AboutPoints />
         <div id="workoutTypes">
@@ -54,8 +55,8 @@ export default function Home() {
           <SubHeader title="קצת עליי" />
           <AboutMe />
         </div>
-        <div className="flex flex-col justify-between gap-y-52">
-          <div className=" py-8">
+        <div className=" flex flex-col justify-between">
+          <div className="relative h-96 overflow-x-hidden max-w-screen py-8">
             <SubHeader title="תוצאות" />
             <Screenshots />
           </div>

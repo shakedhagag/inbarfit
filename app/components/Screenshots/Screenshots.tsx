@@ -26,7 +26,7 @@ export default function Screenshots() {
 
   useEffect(() => {
     let controls;
-    let finalPosition = -width / 2 - 8;
+    let finalPosition = Math.min(-width / 2 - 8, -window.innerWidth + width);
     controls = animate(xTranslation, [0, finalPosition], {
       ease: "linear",
       duration: 70,
@@ -39,7 +39,7 @@ export default function Screenshots() {
     <motion.div
       ref={ref}
       style={{ x: xTranslation }}
-      className="absolute left-0 flex gap-4"
+      className=" max-w-screen absolute left-0 flex gap-4 "
     >
       {[
         ...(screenshots as ImportedImages),
@@ -47,10 +47,7 @@ export default function Screenshots() {
       ].map((img: ImportedImage, i: number) => {
         return (
           <Suspense key={i} fallback={<>Loading...</>}>
-            <Card
-              className="relative place-self-center overflow-hidden w-56 h-56 m-2 group"
-              key={i}
-            >
+            <Card className=" place-self-center  w-56 h-56 m-2 group" key={i}>
               <Image
                 alt="image"
                 fill
