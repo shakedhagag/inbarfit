@@ -47,7 +47,7 @@ export default function Home() {
         </div>
         <SubHeader title="מידע כללי על הסטודיו" />
         <AboutPoints />
-        <div id="workoutTypes">
+        <div className="workoutTypes relative h-96 overflow-x-hidden max-w-screen py-8">
           <SubHeader title="סוגי אימונים" />
           <WorkoutTypes />
         </div>
