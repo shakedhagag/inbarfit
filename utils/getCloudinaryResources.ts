@@ -7,6 +7,5 @@ export async function getCloudinaryResources() {
       },
     },
   ).then((r) => r.json());
-  console.log(results.resources);
   return results.resources;
 }
