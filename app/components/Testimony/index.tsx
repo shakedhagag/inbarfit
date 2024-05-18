@@ -20,14 +20,14 @@ export default function Testimony() {
         spaceBetween={10}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className={style.swiper}
+        className="!absolute w-full h-full"
       >
-        <SwiperSlide>
+        <SwiperSlide className="min-w-80 h-[26rem] md:!h-auto md:min-h-96">
           <YouTube
             videoId="l_tNqDJ07r0"
             opts={opts}
             className="w-full h-full"
-            iframeClassName="w-full h-full"
+            iframeClassName="w-full h-full flex-1"
           />
           {/* <iframe */}
           {/*   style={{ height: "100%", width: "100%", minHeight: "460px" }} */}
