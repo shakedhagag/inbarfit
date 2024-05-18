@@ -16,33 +16,33 @@ export default function Header() {
   const burger = useRef(null);
   const [isOpenGallery, setIsOpenGallery] = useState(false);
 
-  useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to(burger.current, {
-      scrollTrigger: {
-        trigger: document.documentElement,
-        start: 0,
-        end: 50,
-        onLeave: () => {
-          gsap.to(burger.current, {
-            scale: 1,
-            duration: 0.25,
-            ease: "power1.out",
-          });
-        },
-        onEnterBack: () => {
-          gsap.to(burger.current, {
-            scale: 0,
-            duration: 0.25,
-            ease: "power1.out",
-          });
-          setIsMenuActive(false);
-        },
-      },
-      rotate: 360,
-    });
-  }, []);
-
+  // useLayoutEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
+  //   gsap.to(burger.current, {
+  //     scrollTrigger: {
+  //       trigger: document.documentElement,
+  //       start: 0,
+  //       end: 50,
+  //       onLeave: () => {
+  //         gsap.to(burger.current, {
+  //           scale: 1,
+  //           duration: 0.25,
+  //           ease: "power1.out",
+  //         });
+  //       },
+  //       onEnterBack: () => {
+  //         gsap.to(burger.current, {
+  //           scale: 0,
+  //           duration: 0.25,
+  //           ease: "power1.out",
+  //         });
+  //         setIsMenuActive(false);
+  //       },
+  //     },
+  //     rotate: 360,
+  //   });
+  // }, []);
+  //
   useEffect(() => {
     if (isMenuActive) {
       document.body.style.overflow = "hidden";
