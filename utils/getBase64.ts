@@ -31,8 +31,8 @@ export interface CldImg {
   secure_url: string;
   blurredDataUrl: string;
 }
-export default async function addBlurredDataUrls(): Promise<[]> {
-  const images = await getCloudinaryResources();
+export default async function addBlurredDataUrls(tag: string): Promise<[]> {
+  const images = await getCloudinaryResourcesByTag(tag);
   const base64Promises = images.map((photo: CldImg) => {
     if (photo.format === "heic") return;
     getBase64(photo.url);
@@ -45,14 +45,16 @@ export default async function addBlurredDataUrls(): Promise<[]> {
   return photosWithBlur;
 }
 
-export async function getCloudinaryResources() {
+export async function getCloudinaryResourcesByTag(tag: string) {
+  console.log(tag);
   const results = await fetch(
-    `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/resources/image?max_results=30`,
+    `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/resources/image/tags/${tag}?max_results=30`,
     {
       headers: {
         Authorization: `Basic ${Buffer.from(process.env.CLOUDINARY_API_KEY + ":" + process.env.CLOUDINARY_SECRET).toString("base64")}`,
       },
     },
   ).then((r) => r.json());
+  console.log(results);
   return results.resources;
 }
