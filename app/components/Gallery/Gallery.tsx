@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import {
   useDisclosure,
   Modal,
@@ -47,24 +47,26 @@ export default function Gallery({ isOpen, onClose }: GalleryProps) {
         <ModalBody className="grid grid-cols-4 ">
           {images.map((img) => {
             return (
-              <Card
-                className="relative place-self-center overflow-hidden w-56 h-56 m-2 group"
-                key={img.asset_id}
-              >
-                <CldImage
-                  alt="image"
-                  fill
-                  src={img.url}
-                  className="object-cover group-hover:opacity-75"
-                  placeholder="blur"
-                  blurDataURL={img.blurredDataUrl}
-                  loading="lazy"
-                  sizes="(min-width: 480px ) 50vw,
+              <Suspense key={img.asset_id} fallback={<>Loading...</>}>
+                <Card
+                  className="relative place-self-center overflow-hidden w-56 h-56 m-2 group"
+                  key={img.asset_id}
+                >
+                  <CldImage
+                    alt="image"
+                    fill
+                    src={img.url}
+                    className="object-cover group-hover:opacity-75"
+                    // placeholder="blur"
+                    // blurDataURL={img.blurredDataUrl}
+                    loading="lazy"
+                    sizes="(min-width: 480px ) 50vw,
           (min-width: 728px) 33vw,
           (min-width: 976px) 25vw,
           100vw"
-                />
-              </Card>
+                  />
+                </Card>
+              </Suspense>
             );
           })}
         </ModalBody>

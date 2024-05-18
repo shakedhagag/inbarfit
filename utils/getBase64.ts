@@ -33,7 +33,10 @@ export interface CldImg {
 }
 export default async function addBlurredDataUrls(): Promise<[]> {
   const images = await getCloudinaryResources();
-  const base64Promises = images.map((photo: CldImg) => getBase64(photo.url));
+  const base64Promises = images.map((photo: CldImg) => {
+    if (photo.format === "heic") return;
+    getBase64(photo.url);
+  });
   const base64Results = await Promise.all(base64Promises);
   const photosWithBlur = images.map((photo: CldImg, i: number) => {
     photo.blurredDataUrl = base64Results[i];
