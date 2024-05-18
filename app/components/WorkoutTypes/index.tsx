@@ -1,7 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
-import "swiper/scss";
-import "swiper/scss/navigation";
-import "swiper/scss/pagination";
+import React from "react";
 import Card from "../ui/Card";
 import { useIsMobile } from "@/utils/useIsMobile";
 
