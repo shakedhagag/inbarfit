@@ -10,7 +10,7 @@ import {
 
 export default function SocialIcons() {
   return (
-    <div className="pr-2 md:mt-2 sm:flex sm:items-center sm:justify-between">
+    <div className="pr-2 mt-2 md:mt-2 sm:flex sm:items-center sm:justify-between">
       <ul className="flex justify-center gap-6 sm:justify-end">
         <li>
           <button className="text-teal-700 transition hover:text-pink-700/75">
