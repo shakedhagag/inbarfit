@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-import styles from "./style.module.scss";
-import Image from "next/image";
+import React from "react";
 import { Container } from "../ui/Container";
-import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
+import { Card, CardHeader, CardBody } from "@nextui-org/card";
 import YouTube, { YouTubeProps } from "react-youtube";
 import { useIsMobile } from "@/utils/useIsMobile";
 
@@ -30,7 +28,7 @@ export default function Intro() {
       </Card>
       <Container className="flex flex-col">
         <CardHeader className="">
-          <h3 className="text-3xl">
+          <h3 className="text-2xl md:text-3xl">
             מזמינה אותך להצטרף אליי לסטודיו בוטיק בסביון 🌸
           </h3>
         </CardHeader>
@@ -38,11 +36,11 @@ export default function Intro() {
           dir="rtl"
           className="min-h-64 items-center justify-center break-normal lg:min-h-96 text-right"
         >
-          <p className="text-xl md:text-2xl tracking-wide leading-8 text-balance">
-            נעים להכיר אני ענבר זיכלינסקי קואצ&apos;רית לאורח חיים בריא ומאמנת
-            כושר מוסמכת, והבעלים של חברת OBIZ. הקמתי את הסטודיו כדי לתת לכל אחת
-            מכן בית לאימונים, מקום בו תרגישו בנוח להתאמן ותהנו להגיע לכל אימון.
-          </p>
+          <p className="text-xl md:text-2xl tracking-wide leading-8 text-balance w-full h-full">
+            נעים להכיר אני ענבר זיכלינסקי קואצרית לאורח חיים בריא ומאמנת כושר
+            מוסמכת, והבעלים של חברת OBIZ. הקמתי את הסטודיו כדי לתת לכל אחת מכן
+            בית לאימונים, מקום בו תרגישו בנוח להתאמן ותהנו להגיע לכל אימון.
+          </p>{" "}
         </CardBody>
       </Container>
     </Card>
