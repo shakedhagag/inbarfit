@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect } from "react";
-import { Card } from "@nextui-org/react";
+import { Card, CardHeader } from "@nextui-org/react";
 import { animate, motion, useMotionValue } from "framer-motion";
 import useMeasure from "react-use-measure";
 import workoutTypes from "@/utils/workoutTypes";
@@ -18,6 +18,21 @@ interface ImportedImage {
 }
 
 type ImportedImages = ImportedImage[];
+
+const workoutNames: { [key: string]: string } = {
+  functional: "פונקציונלי",
+  kickbox: "קיקבוקס",
+  pilates: "פילאטיס",
+  yoga: "יוגה",
+};
+const extractWorkoutName = (src: string): string => {
+  for (const key in workoutNames) {
+    if (src.includes(key)) {
+      return workoutNames[key];
+    }
+  }
+  return "Unknown";
+};
 
 export default function WorkoutTypes() {
   let [ref, { width }] = useMeasure();
@@ -44,6 +59,8 @@ export default function WorkoutTypes() {
         ...(workoutTypes as ImportedImages),
         ...(workoutTypes as ImportedImages),
       ].map((img: ImportedImage, i: number) => {
+        const workoutName = extractWorkoutName(img.default.src);
+
         return (
           <Suspense key={i} fallback={<>Loading...</>}>
             <Card className=" place-self-center  w-56 h-56 m-2 group" key={i}>
@@ -60,6 +77,12 @@ export default function WorkoutTypes() {
           (min-width: 976px) 25vw,
           100vw"
               />
+              <CardHeader className=" justify-center text-lg ">
+                <div className="backdrop-blur-[1px] h-10  bg-gradient-to-b from-white/5 to to-white/15 opacity-60 absolute inset-0"></div>
+                <span className="font-bold text-xl text-pink-900 relative">
+                  {workoutName}
+                </span>
+              </CardHeader>
             </Card>
           </Suspense>
         );
