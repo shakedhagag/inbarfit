@@ -6,11 +6,12 @@ import {
   LinkedInIcon,
   FacebookIcon,
 } from "@/public/icons";
+import { Image } from "@nextui-org/react";
 
 function SocialRow() {
   return (
     <div className="mt-16">
-      <div className="mt-16 sm:flex sm:items-center sm:justify-between">
+      <div className="mt-16 sm:flex sm:items-end sm:justify-between">
         <ul className="flex justify-center gap-6 sm:justify-end">
           <li>
             <button className="text-teal-700 transition hover:text-pink-700/75">
@@ -48,7 +49,7 @@ function SocialRow() {
           </li>
         </ul>
         <div className="flex justify-center text-teal-600 sm:justify-start">
-          InbarFit
+          <Image src="/images/Logo.png" />
         </div>
 
         <p className="mt-4 text-center text-sm text-gray-500 sm:mt-0 sm:text-right">
