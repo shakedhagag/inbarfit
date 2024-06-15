@@ -12,7 +12,7 @@ export const navItems = [
   { title: "קצת עליי", href: "#aboutMe" },
   { title: "מתאמנות מספרות", href: "#testimony" },
   { title: "סוגי אימונים", href: "#workoutTypes" },
-  { title: "גלריה", href: "/gallery" },
+  { title: "גלריה", href: "/?gallery=true" },
   { title: "צור קשר", href: "https://tinyurl.com/58jubfw8" },
 ];
 

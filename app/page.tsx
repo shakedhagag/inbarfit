@@ -1,6 +1,5 @@
 "use client";
 import styles from "./page.module.scss";
-import { useEffect } from "react";
 import Intro from "./components/Intro";
 import AboutPoints from "./components/AboutPoints";
 import SubHeader from "./components/SubHeader";
@@ -11,13 +10,25 @@ import Link from "next/link";
 import { Offers } from "./components/Offers/Offers";
 import Screenshots from "./components/Screenshots/Screenshots";
 import Testimony from "./components/Testimony";
-export default function Home() {
-  // useEffect(() => {
-  //   (async () => {
-  //     const LocomotiveScroll = (await import("locomotive-scroll")).default;
-  //     const locomotiveScroll = new LocomotiveScroll();
-  //   })();
-  // }, []);
+import { useEffect, useState } from "react";
+import Gallery from "./components/Gallery/Gallery";
+import { useRouter } from "next/navigation";
+export default function Home({
+  searchParams,
+}: {
+  searchParams: { gallery?: string };
+}) {
+  const router = useRouter();
+  const [isOpenGallery, setIsOpenGallery] = useState(false);
+  useEffect(() => {
+    if (searchParams.gallery === "true") {
+      setIsOpenGallery(true);
+      console.log("kaki");
+    } else {
+      setIsOpenGallery(false);
+    }
+  }, [isOpenGallery, searchParams]);
+
   return (
     <div className={styles.pageLayout}>
       <header>
@@ -69,6 +80,13 @@ export default function Home() {
       <div className={styles.footerCont}>
         <Footer />
       </div>
+      <Gallery
+        isOpen={isOpenGallery}
+        onClose={() => {
+          setIsOpenGallery(false);
+          router.replace("/");
+        }}
+      />
     </div>
   );
 }
