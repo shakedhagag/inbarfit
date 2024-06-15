@@ -23,7 +23,6 @@ export default function Home({
   useEffect(() => {
     if (searchParams.gallery === "true") {
       setIsOpenGallery(true);
-      console.log("kaki");
     } else {
       setIsOpenGallery(false);
     }

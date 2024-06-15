@@ -11,6 +11,7 @@ import {
 import { CldImage } from "next-cloudinary";
 import addBlurredDataUrls from "@/utils/getBase64";
 import { CldImg } from "@/utils/getBase64";
+import { useIsMobile } from "@/utils/useIsMobile";
 
 interface GalleryProps {
   isOpen: boolean;
@@ -31,20 +32,20 @@ export default function Gallery({ isOpen, onClose }: GalleryProps) {
 
     fetchImgs();
   }, []);
+  const isMobile = useIsMobile();
 
   if (!images?.length) return null;
   return (
     <Modal
-      size="5xl"
+      size={isMobile ? "full" : "5xl"}
       backdrop="blur"
-      // placement="bottom"
       isOpen={isOpen}
       onClose={onClose}
-      scrollBehavior="outside"
+      scrollBehavior="inside"
     >
-      <ModalContent className="p-4">
+      <ModalContent className="p-4 h-full bg-white">
         <ModalHeader>גלריה</ModalHeader>
-        <ModalBody className="grid grid-cols-4 ">
+        <ModalBody className={`grid grid-cols-${isMobile ? 2 : 4}`}>
           {images.map((img) => {
             return (
               <Suspense key={img.asset_id} fallback={<>Loading...</>}>
