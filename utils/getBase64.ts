@@ -46,7 +46,6 @@ export default async function addBlurredDataUrls(tag: string): Promise<[]> {
 }
 
 export async function getCloudinaryResourcesByTag(tag: string) {
-  console.log(tag);
   const results = await fetch(
     `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/resources/image/tags/${tag}?max_results=30`,
     {
@@ -55,6 +54,5 @@ export async function getCloudinaryResourcesByTag(tag: string) {
       },
     },
   ).then((r) => r.json());
-  console.log(results);
   return results.resources;
 }

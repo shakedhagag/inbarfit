@@ -1,5 +1,5 @@
 import React from "react";
-import aboutPhoto from "@/public/images/InbarSquat.jpg";
+import aboutPhoto from "@/public/images/pointsbg.jpg";
 import {
   Card,
   CardHeader,
@@ -14,7 +14,7 @@ export default function AboutPoints() {
       radius="lg"
       className=" border-none h-[300px] lg:h-[500px]"
     >
-      <CardFooter className="justify-between flex-col before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+      <CardFooter className="justify-center flex-col before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 px-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
         <h4 className="text-white font-medium text-large">
           אימוני כושר אישיים בקבוצות קטנות
         </h4>

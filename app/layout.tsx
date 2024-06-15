@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Heebo, Noto_Sans_Hebrew } from "next/font/google";
+import { Inter, Heebo, Noto_Sans_Hebrew, Varela_Round } from "next/font/google";
 import Header from "./components/Header";
 import "./globals.scss";
 import { NextUIProvider } from "@nextui-org/react";
 
 const inter = Inter({ subsets: ["latin"] });
 const noto = Noto_Sans_Hebrew({ subsets: ["hebrew"] });
+const varela = Varela_Round({ weight: "400", subsets: ["hebrew"] });
 
 export const metadata: Metadata = {
   title: "InbarFit Studio",
@@ -19,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="he" dir="rtl">
-      <body className={(inter.className, noto.className)}>
+      <body className={varela.className}>
         <NextUIProvider>
           <Header />
           {children}

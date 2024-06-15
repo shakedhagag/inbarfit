@@ -45,25 +45,25 @@ export default function Home() {
           <SubHeader title="מתאמנות מספרות" />
           <Testimony />
         </div>
+        <div className="relative h-[28rem] overflow-x-hidden max-w-screen py-8">
+          <SubHeader title="תוצאות" />
+          <Screenshots />
+        </div>
         <SubHeader title="מידע כללי על הסטודיו" />
         <AboutPoints />
         <div className="workoutTypes relative h-96 overflow-x-hidden max-w-screen py-8">
           <SubHeader title="סוגי אימונים" />
           <WorkoutTypes />
         </div>
-        <div id="aboutMe">
-          <SubHeader title="קצת עליי" />
-          <AboutMe />
-        </div>
         <div className=" flex flex-col justify-between">
-          <div className="relative h-96 overflow-x-hidden max-w-screen py-8">
-            <SubHeader title="תוצאות" />
-            <Screenshots />
-          </div>
           <div className="mt-14">
             <SubHeader title="אז מה אני מציעה?" />
             <Offers />
           </div>
+        </div>
+        <div id="aboutMe">
+          <SubHeader title="קצת עליי" />
+          <AboutMe />
         </div>
       </main>
       <div className={styles.footerCont}>

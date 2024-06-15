@@ -1,6 +1,5 @@
 import React, { Suspense, useEffect, useState } from "react";
-import addBlurredDataUrls, { CldImg } from "@/utils/getBase64";
-import { Card } from "@nextui-org/react";
+import { Card, Modal, ModalBody, ModalContent } from "@nextui-org/react";
 import Image from "next/image";
 import screenshots from "@/utils/screenshots";
 import { animate, motion, useMotionValue } from "framer-motion";
@@ -23,6 +22,10 @@ type ImportedImages = ImportedImage[];
 export default function Screenshots() {
   let [ref, { width }] = useMeasure();
   const xTranslation = useMotionValue(0);
+  const [openPhotoModal, setOpenPhotoModal] = useState(false);
+  const [modalImg, setModalImg] = useState<ImportedImage>(
+    screenshots[0] as ImportedImage,
+  );
 
   useEffect(() => {
     let controls;
@@ -47,7 +50,15 @@ export default function Screenshots() {
       ].map((img: ImportedImage, i: number) => {
         return (
           <Suspense key={i} fallback={<>Loading...</>}>
-            <Card className=" place-self-center  w-56 h-56 m-2 group" key={i}>
+            <Card
+              isPressable
+              className=" place-self-center  w-56 h-72 m-2 group"
+              key={i}
+              onPress={() => {
+                setOpenPhotoModal(true);
+                setModalImg(img);
+              }}
+            >
               <Image
                 alt="image"
                 fill
@@ -65,6 +76,32 @@ export default function Screenshots() {
           </Suspense>
         );
       })}
+      <Modal
+        size="lg"
+        isOpen={openPhotoModal}
+        onOpenChange={setOpenPhotoModal}
+        backdrop="blur"
+      >
+        <ModalContent>
+          <>
+            <ModalBody>
+              <Image
+                alt="image"
+                width={modalImg?.default.width}
+                height={modalImg?.default.height}
+                src={modalImg?.default?.src}
+                placeholder="blur"
+                blurDataURL={modalImg?.default.blurDataURL}
+                loading="lazy"
+                sizes="(min-width: 480px ) 50vw,
+                      (min-width: 728px) 33vw,
+                      (min-width: 976px) 25vw,
+                      100vw"
+              />
+            </ModalBody>
+          </>
+        </ModalContent>
+      </Modal>
     </motion.div>
   );
 }
