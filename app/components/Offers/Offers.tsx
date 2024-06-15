@@ -70,11 +70,7 @@ export const Offers = () => {
           </CardFooter>
         </Card>
       </Container>
-      <Modal
-        isOpen={isOpen}
-        onOpenChange={onOpenChange}
-        size={`${isMobile ? "full" : "4xl"}`}
-      >
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="4xl">
         <ModalContent>
           <Image src="/images/luz.png" />
         </ModalContent>
